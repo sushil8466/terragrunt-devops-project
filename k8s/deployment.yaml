@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: terragrunt-devops-project
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: terragrunt-devops-project
+
+  template:
+    metadata:
+      labels:
+        app: terragrunt-devops-project
+
+    spec:
+      containers:
+      - name: terragrunt-devops-project
+
+        image: 395516497310.dkr.ecr.ap-south-1.amazonaws.com/terragrunt-devops-project-app:v1
+
+        ports:
+        - containerPort: 80
