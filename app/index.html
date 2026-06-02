@@ -1,10 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Terragrunt DevOps Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terragrunt DevOps Project</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            color: #38bdf8;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #94a3b8;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: #1e293b;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #334155;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #475569;
+        }
+
+        .flow {
+            font-size: 1.1rem;
+            line-height: 2;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Terragrunt DevOps Project</h1>
-  <p>Deployed on EKS using ArgoCD and GitHub Actions</p>
+
+<div class="container">
+
+    <h1>🚀 Terragrunt DevOps Project</h1>
+
+    <h2>End-to-End GitOps Platform on AWS</h2>
+
+    <div class="section">
+        <h3>📖 Project Overview</h3>
+
+        <p>
+            End-to-End GitOps Platform built using Terraform, Terragrunt,
+            AWS EKS, ECR, Docker, Kubernetes, Helm, ArgoCD,
+            and GitHub Actions.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>🏗️ Deployment Flow</h3>
+
+        <div class="flow">
+            GitHub → GitHub Actions → Amazon ECR → ArgoCD → Amazon EKS
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>⚙️ Technologies Used</h3>
+
+        <div class="tech-grid">
+
+            <div class="card">Terraform</div>
+            <div class="card">Terragrunt</div>
+            <div class="card">AWS VPC</div>
+            <div class="card">Amazon EKS</div>
+            <div class="card">Amazon ECR</div>
+            <div class="card">Amazon S3</div>
+            <div class="card">Docker</div>
+            <div class="card">Kubernetes</div>
+            <div class="card">Helm</div>
+            <div class="card">ArgoCD</div>
+            <div class="card">GitHub Actions</div>
+            <div class="card">GitOps</div>
+            <div class="card">Nginx</div>
+            <div class="card">YAML</div>
+            <div class="card">Linux</div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>☁️ Infrastructure Components</h3>
+
+        <p>
+            ✅ Custom VPC<br>
+            ✅ Public & Private Subnets<br>
+            ✅ Amazon EKS Cluster<br>
+            ✅ Managed Node Group<br>
+            ✅ Amazon ECR Repository<br>
+            ✅ Amazon S3 Remote Backend<br>
+            ✅ ArgoCD Deployment<br>
+            ✅ GitHub Actions CI/CD Pipeline
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>👨‍💻 Author</h3>
+
+        <p>
+            <strong>Sushil</strong>
+        </p>
+
+        <p>
+            DevOps Engineer | Cloud Engineer | Site Reliability Engineering Enthusiast
+        </p>
+    </div>
+
+    <footer>
+        Built with AWS • Terraform • Terragrunt • Docker • Kubernetes • Helm • ArgoCD • GitHub Actions
+    </footer>
+
+</div>
+
 </body>
 </html>
