@@ -1,107 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terragrunt DevOps Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            text-align: center;
-        }
+<title>Terragrunt DevOps Platform</title>
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        h1 {
-            color: #38bdf8;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+<style>
 
-        h2 {
-            color: #94a3b8;
-            font-weight: normal;
-            margin-bottom: 40px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .section {
-            background: #1e293b;
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 12px;
-        }
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #111827 35%,
+        #1e1b4b 100%
+    );
+    color:#ffffff;
+    min-height:100vh;
+}
 
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
+.container{
+    max-width:1300px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-        .card {
-            background: #334155;
-            padding: 15px;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            background: #475569;
-        }
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    background:linear-gradient(
+        90deg,
+        #38bdf8,
+        #a855f7,
+        #22d3ee
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        .flow {
-            font-size: 1.1rem;
-            line-height: 2;
-            font-weight: bold;
-            color: #38bdf8;
-        }
+.hero h2{
+    color:#cbd5e1;
+    font-weight:400;
+    margin-bottom:20px;
+}
 
-        footer {
-            margin-top: 40px;
-            color: #94a3b8;
-            font-size: 14px;
-        }
-    </style>
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:#94a3b8;
+    line-height:1.8;
+}
+
+.section{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+    transition:0.3s ease;
+}
+
+.section:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 10px 25px rgba(56,189,248,0.2);
+}
+
+.section h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:1.5rem;
+}
+
+.overview{
+    text-align:center;
+    line-height:1.8;
+    color:#dbeafe;
+}
+
+.flow{
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:600;
+    color:#67e8f9;
+    padding:20px;
+    border-radius:12px;
+    background:
+    rgba(56,189,248,0.08);
+}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.card{
+    background:
+    linear-gradient(
+        135deg,
+        rgba(56,189,248,0.15),
+        rgba(168,85,247,0.15)
+    );
+
+    border:1px solid rgba(255,255,255,0.1);
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:
+    0 10px 20px rgba(56,189,248,0.25);
+}
+
+.infrastructure{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.infra-item{
+    background:#1e293b;
+    padding:15px;
+    border-radius:12px;
+    border-left:4px solid #38bdf8;
+}
+
+.badges{
+    margin-top:20px;
+}
+
+.badge{
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    border-radius:50px;
+    background:rgba(56,189,248,0.15);
+    border:1px solid rgba(56,189,248,0.25);
+    color:#67e8f9;
+    font-size:14px;
+}
+
+.author{
+    text-align:center;
+}
+
+.author h4{
+    font-size:2rem;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.author p{
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    color:#94a3b8;
+    padding-bottom:30px;
+}
+
+.highlight{
+    color:#38bdf8;
+    font-weight:600;
+}
+
+.status-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.status{
+    background:#0f766e;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.hero h2{
+    font-size:1.1rem;
+}
+
+.flow{
+    font-size:1rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>🚀 Terragrunt DevOps Project</h1>
+    <!-- HERO SECTION -->
 
-    <h2>End-to-End GitOps Platform on AWS</h2>
+    <div class="hero">
 
-    <div class="section">
-        <h3>📖 Project Overview</h3>
+        <h1>🚀 Terragrunt DevOps Platform</h1>
+
+        <h2>End-to-End GitOps Infrastructure on AWS</h2>
 
         <p>
-            End-to-End GitOps Platform built using Terraform, Terragrunt,
-            AWS EKS, ECR, Docker, Kubernetes, Helm, ArgoCD,
-            and GitHub Actions.
+            Provision, Deploy and Manage Cloud Infrastructure using
+            Terraform, Terragrunt, Docker, Kubernetes, Helm,
+            ArgoCD and GitHub Actions following modern GitOps
+            best practices.
         </p>
+
+        <div class="status-container">
+            <div class="status">✅ Infrastructure as Code</div>
+            <div class="status">✅ GitOps</div>
+            <div class="status">✅ CI/CD Automation</div>
+            <div class="status">✅ Cloud Native</div>
+        </div>
+
     </div>
 
+    <!-- PROJECT OVERVIEW -->
+
     <div class="section">
-        <h3>🏗️ Deployment Flow</h3>
+
+        <h3>📖 Project Overview</h3>
+
+        <div class="overview">
+
+            This project demonstrates a complete DevOps ecosystem
+            built on AWS using Infrastructure as Code and GitOps
+            principles.
+
+            <br><br>
+
+            The platform automates infrastructure provisioning,
+            application deployment, container image management,
+            and Kubernetes operations using industry-standard tools.
+
+        </div>
+
+    </div>
+
+    <!-- DEPLOYMENT FLOW -->
+
+    <div class="section">
+
+        <h3>🔄 Deployment Flow</h3>
 
         <div class="flow">
-            GitHub → GitHub Actions → Amazon ECR → ArgoCD → Amazon EKS
+
+            GitHub Repository
+
+            ➜
+
+            GitHub Actions CI/CD
+
+            ➜
+
+            Amazon ECR
+
+            ➜
+
+            ArgoCD GitOps Sync
+
+            ➜
+
+            Amazon EKS Cluster
+
         </div>
+
     </div>
 
+    <!-- TECHNOLOGIES -->
+
     <div class="section">
+
         <h3>⚙️ Technologies Used</h3>
 
         <div class="tech-grid">
@@ -118,42 +325,133 @@
             <div class="card">ArgoCD</div>
             <div class="card">GitHub Actions</div>
             <div class="card">GitOps</div>
+            <div class="card">Linux</div>
             <div class="card">Nginx</div>
             <div class="card">YAML</div>
-            <div class="card">Linux</div>
 
         </div>
+
     </div>
 
+    <!-- INFRASTRUCTURE -->
+
     <div class="section">
+
         <h3>☁️ Infrastructure Components</h3>
 
-        <p>
-            ✅ Custom VPC<br>
-            ✅ Public & Private Subnets<br>
-            ✅ Amazon EKS Cluster<br>
-            ✅ Managed Node Group<br>
-            ✅ Amazon ECR Repository<br>
-            ✅ Amazon S3 Remote Backend<br>
-            ✅ ArgoCD Deployment<br>
-            ✅ GitHub Actions CI/CD Pipeline
-        </p>
+        <div class="infrastructure">
+
+            <div class="infra-item">
+                ✅ Custom AWS VPC
+            </div>
+
+            <div class="infra-item">
+                ✅ Public & Private Subnets
+            </div>
+
+            <div class="infra-item">
+                ✅ Amazon EKS Cluster
+            </div>
+
+            <div class="infra-item">
+                ✅ Managed Node Group
+            </div>
+
+            <div class="infra-item">
+                ✅ Amazon ECR Repository
+            </div>
+
+            <div class="infra-item">
+                ✅ Amazon S3 Remote Backend
+            </div>
+
+            <div class="infra-item">
+                ✅ DynamoDB State Locking
+            </div>
+
+            <div class="infra-item">
+                ✅ ArgoCD Deployment
+            </div>
+
+            <div class="infra-item">
+                ✅ GitHub Actions Pipeline
+            </div>
+
+            <div class="infra-item">
+                ✅ Kubernetes Workloads
+            </div>
+
+        </div>
+
     </div>
 
+    <!-- FEATURES -->
+
     <div class="section">
+
+        <h3>🎯 Key Features</h3>
+
+        <div class="infrastructure">
+
+            <div class="infra-item">
+                Infrastructure as Code using Terraform & Terragrunt
+            </div>
+
+            <div class="infra-item">
+                GitOps Deployment Strategy with ArgoCD
+            </div>
+
+            <div class="infra-item">
+                Automated CI/CD with GitHub Actions
+            </div>
+
+            <div class="infra-item">
+                Container Registry using Amazon ECR
+            </div>
+
+            <div class="infra-item">
+                Secure Remote State Management
+            </div>
+
+            <div class="infra-item">
+                Scalable Kubernetes Platform
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- AUTHOR -->
+
+    <div class="section author">
+
         <h3>👨‍💻 Author</h3>
 
-        <p>
-            <strong>Sushil</strong>
-        </p>
+        <h4>Sushil</h4>
 
         <p>
-            DevOps Engineer | Cloud Engineer | Site Reliability Engineering Enthusiast
+            DevOps Engineer • Cloud Engineer • Site Reliability Engineering Enthusiast
         </p>
+
+        <div class="badges">
+
+            <span class="badge">AWS</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">Terragrunt</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Kubernetes</span>
+            <span class="badge">GitOps</span>
+            <span class="badge">CI/CD</span>
+            <span class="badge">SRE</span>
+
+        </div>
+
     </div>
 
     <footer>
-        Built with AWS • Terraform • Terragrunt • Docker • Kubernetes • Helm • ArgoCD • GitHub Actions
+
+        Built with ❤️ using AWS • Terraform • Terragrunt • Docker • Kubernetes • Helm • ArgoCD • GitHub Actions
+
     </footer>
 
 </div>
