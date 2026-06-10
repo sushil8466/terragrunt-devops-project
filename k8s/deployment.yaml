@@ -20,7 +20,7 @@ spec:
       containers:
       - name: terragrunt-devops-project
 
-        image: 395516497310.dkr.ecr.ap-south-1.amazonaws.com/terragrunt-devops-project-app:v3
+        image: 395516497310.dkr.ecr.ap-south-1.amazonaws.com/terragrunt-devops-project-app:v4
 
         ports:
         - containerPort: 80
